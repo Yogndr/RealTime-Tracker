@@ -30,18 +30,17 @@ Make sure you have the following installed:
    ```bash
    git clone https://github.com/your-username/realtime_tracker.git
 
-2. Navigate to the project directory:
-
+2. **Navigate to the project directory**:
    cd realtime_tracker
 
-3.Install dependencies:
+3. **Install dependencies**:
+   npm install
 
-  npm install
 
+## Usage
+1. **Start the server**:
+    npm start
 
-Usage
-Start the server:
-npm start
 
 The application will run on http://localhost:4000 by default.
 
@@ -49,9 +48,8 @@ Access the Application: Open your browser and go to http://localhost:4000 to vie
 
 Enable Location Sharing: When prompted, allow location sharing in your browser to send location data to the server.
 
-Project Structure
-php
-Copy code
+## Project Structure
+
 realtime_tracker/
 ├── public/                 # Static files (CSS, JS)
 │   ├── css/                # Styling for the application
@@ -62,31 +60,31 @@ realtime_tracker/
 │   └── index.ejs
 ├── app.js                  # Main application file
 └── README.md               # Project README file
-Functionalities
-Real-Time Location Updates: Uses Geolocation API to send location updates and broadcast them to all connected clients.
-Map Visualization: Displays users' real-time location on an interactive Leaflet map.
-Dynamic Marker Management: Adds markers for new users and removes them when a user disconnects.
-Automatic Map Centering: Centers the map on the latest location update.
+
+## Functionalities
+**Real-Time Location Updates**: Uses Geolocation API to send location updates and broadcast them to all connected clients.
+**Map Visualization**: Displays users' real-time location on an interactive Leaflet map.
+**Dynamic Marker Management**: Adds markers for new users and removes them when a user disconnects.
+**Automatic Map Centering**: Centers the map on the latest location update.
 
 
-How It Works
-Backend:
+## How It Works
+**Backend**:
 app.js sets up an Express server with Socket.io for real-time communication.
 When a user connects, the server listens for location data sent by the client and broadcasts it to all clients.
 On disconnection, the server notifies other clients to remove the disconnected user's marker.
 
-Frontend:
+**Frontend**:
 index.ejs renders a basic HTML structure and includes client-side JavaScript.
 public/script.js uses the Geolocation API to track the user’s location and send it to the server.
 Leaflet displays the location on an interactive map, creating a marker for each user and updating or removing it as needed.
 
-Dependencies
-express - Fast, minimalist web framework for Node.js
-ejs - Templating engine for generating dynamic HTML
-socket.io - Enables real-time, bidirectional event-based communication
-leaflet - JavaScript library for interactive maps
+## Dependencies
+**express** - Fast, minimalist web framework for Node.js
+**ejs** - Templating engine for generating dynamic HTML
+**socket.io** - Enables real-time, bidirectional event-based communication
+**leaflet** - JavaScript library for interactive maps
 
-Install these dependencies with:
-npm install express ejs socket.io leaflet
+
 
    
