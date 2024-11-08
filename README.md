@@ -48,18 +48,6 @@ Access the Application: Open your browser and go to http://localhost:4000 to vie
 
 Enable Location Sharing: When prompted, allow location sharing in your browser to send location data to the server.
 
-## Project Structure
-
-realtime_tracker/
-├── public/                 # Static files (CSS, JS)
-│   ├── css/                # Styling for the application
-│   │   └── style.css
-│   └── js/                 # Client-side JavaScript
-│       └── script.js
-├── views/                  # EJS templates for server-side rendering
-│   └── index.ejs
-├── app.js                  # Main application file
-└── README.md               # Project README file
 
 ## Functionalities
 **Real-Time Location Updates**: Uses Geolocation API to send location updates and broadcast them to all connected clients.
